@@ -211,11 +211,12 @@
 
         function addTask(){
             const inputElement = document.getElementById('input');
-            if (inputElement === ""){
-                alert("Enter the task");
+            const taskElementa = inputElement.value;
+            if (taskElementa== ""){
+                alert("Enter the task!");
                 return;
             }
-            taskarray.push(inputElement.value);
+            taskarray.push(taskElementa);
             inputElement.value = "";
     
             localStorage.setItem("taskarray",JSON.stringify(taskarray));
